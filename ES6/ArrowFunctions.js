@@ -25,3 +25,12 @@ function howMany(...args) {
 }
 console.log(howMany(0, 1, 2)); // You have passed 3 arguments.
 console.log(howMany("string", null, [1, 2, 3], { })); // You have passed 4 arguments.
+
+//sum
+const sum = (...args) => {
+    let total = 0;
+    for (let arg of args) {
+      total += arg;
+    }
+    return total;
+}
