@@ -77,3 +77,45 @@ text.match(myLazyRegex);
   groups: undefined
 ]
 */
+
+// beginning
+let firstString = "Ricky is first and can be found."; // true
+let firstRegex = /^Ricky/;
+let notFirst = "You can't find Ricky now."; // false
+
+// ending
+let theEnding = "This is a never ending story"; // true
+let storyRegex = /story$/;
+let noEnding = "Sometimes a story will have to end"; // false
+
+let longHand = /[A-Za-z0-9_]+/;
+let shortHand = /\w+/;
+
+let shortHand2 = /\W/;
+let numbers = "42%"; // ["%"]
+let sentence = "Coding!"; // ["!"]
+
+let whiteSpace = "Whitespace. Whitespace everywhere!"
+let spaceRegex = /\s/g;
+let nonSpaceRegex = /\S/g;
+
+let A4 = "aaaah"; // true
+let A2 = "aah"; // false
+let multipleA = /a{3,5}h/;
+
+let multipleA3 = /ha{3,}h/; // >=3
+let multipleHA = /ha{3}h/; // ==3
+
+let american = "color";
+let british = "colour";
+let rainbowRegex= /colou?r/; // true true 
+
+let quit = "qu";
+let noquit = "qt";
+let quRegex= /q(?=u)/;
+let qRegex = /q(?!u)/;
+// ["q"]
+
+let password = "abc123";
+// for between 3 and 6 characters and at least one number:
+let checkPass = /(?=\w{3,6})(?=\D*\d)/;
