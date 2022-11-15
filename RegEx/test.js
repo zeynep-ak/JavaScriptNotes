@@ -119,3 +119,7 @@ let qRegex = /q(?!u)/;
 let password = "abc123";
 // for between 3 and 6 characters and at least one number:
 let checkPass = /(?=\w{3,6})(?=\D*\d)/;
+
+let wrongText = "The sky is silver.";
+let silverRegex = /silver/;
+wrongText.replace(silverRegex, "blue");
